@@ -1,0 +1,510 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    
+}
+.header{
+    padding: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 100px;
+    margin-right: 10px;
+}
+
+.service h1 {
+    font-size: 2rem;
+    margin: 0;
+    font-weight: bold;
+    animation: slideIn 1.5s ease-out; /* Slide-in animation */
+}
+
+.service h6 {
+    font-size: 0.90rem;
+    margin: 0;
+    color: #1e1e5d;
+    animation: fadeIn 2s ease-in; /* Fade-in animation */
+}
+.main-menu{
+    padding-left: 260px;
+}
+
+/* Restrict content preview to 100px */
+.content-preview {
+    height: 120px;
+    overflow: hidden;
+    position: relative;
+    transition: height 0.3s ease-in-out;
+}
+
+/* Styling for the expanded content */
+.content-preview.expanded {
+    height: auto;
+}
+
+/* Optional styling for the "Learn More" link */
+.learn-more {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.learn-more:hover {
+    text-decoration: underline;
+}
+
+
+ .com-img{
+    width: 500px;
+    height: 250px;
+    border-radius: 10px;
+ }
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-fluid {
+    padding: 0 15px;
+}
+
+/* Portfolio Slider */
+.portfolio_slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    overflow-x: auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    scroll-behavior: smooth;
+}
+
+.single-pf {
+    position: relative;
+    width: 250px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.single-pf:hover {
+    transform: scale(1.05);
+}
+
+/* Overlay */
+.pf_overlay {
+    position: relative;
+    width: 250px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.p-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.single-pf:hover .p-img {
+    transform: scale(1.1);
+}
+
+.pf-name {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+
+
+
+
+/* General Reset */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+    background-color: #f9f9f9;
+}
+
+/* Container */
+.gallery-container {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding: 50px 0;
+    position: relative;
+}
+
+/* Header */
+.gallery-header h1 {
+    font-size: 3rem;
+    color: #003c8f;
+    margin-bottom: 20px;
+    transform: translateY(50px);
+    opacity: 0;
+    animation: fadeIn 1s ease-in forwards;
+}
+
+.gallery-header p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+    transform: translateY(50px);
+    opacity: 0;
+    animation: fadeIn 1.5s ease-in forwards;
+}
+
+/* Images */
+.gallery-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+    margin-top: 30px;
+    margin-top: 100px;
+}
+
+.gallery-img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(0.9);
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+/* Footer */
+ 
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Scroll Animations */
+.gallery-img {
+    will-change: transform, opacity;
+}
+
+.gallery-img.visible {
+    transform: scale(1);
+    opacity: 1;
+}
+
+
+/* General Reset */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+}
+
+/* Gallery Styles */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin-top: 100px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+/* Image Styling */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+/* animation */
+/* Scroll-based Animation Keyframes */
+@keyframes fadeInMove {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Base styles */
+.section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+/* Scrolled into View */
+.section.scrolled {
+    animation: fadeInMove 1s ease-out forwards;
+}
+
+/* Mouse-based Effect */
+.mouse-move {
+    position: relative;
+    will-change: transform;
+}
+
+.mouse-move:hover {
+    transform: scale(2.05);
+    transition: transform 0.4s ease-in-out;
+}
+
+/* General Styling for the Contact Section */
+.appointment {
+    padding: 50px 0;
+    background: #f8f9fa;
+}
+
+.appointment .section-title h2 {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+#contactForm {
+    background: #ffffff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Input Fields */
+#contactForm .form-floating .form-control {
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#contactForm .form-floating .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.5);
+}
+
+/* Submit Button */
+#submitButton {
+    background: #007bff;
+    border: none;
+    font-size: 18px;
+    transition: background 0.3s;
+}
+
+#submitButton:hover {
+    background: #0056b3;
+}
+
+/* Image Styling */
+/* .appointment-image img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+} */
+
+.appointment-image img:hover {
+    transform: scale(1.05);
+}
+
+/* Animation Keyframes */
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Apply Animation */
+#contactForm {
+    animation: fadeInLeft 0.7s ease-out;
+}
+
+.appointment-image img {
+    animation: fadeInRight 0.7s ease-out;
+    animation-delay: 0.3s;
+    animation-fill-mode: both;
+}
+
+
+
+
+/* General Footer Styling */
+.container-fluid.bg-primary {
+    background-color: #007bff; /* Primary color */
+}
+
+.container-fluid.bg-dark {
+    background-color: #343a40; /* Dark background for footer bottom */
+}
+
+/* Styling for the links and icons */
+.container-fluid .text-white {
+    color: white !important;
+}
+
+.container-fluid .btn-secondary {
+    background-color: #6c757d; /* Gray background for social media buttons */
+    border-color: #6c757d;
+}
+
+.container-fluid .btn-lg-square {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-fluid .btn-secondary i {
+    font-size: 20px;
+    color: white; /* White color for icons */
+}
+
+/* Hover effect for social media icons */
+.container-fluid.bg-primary .btn-lg-square:hover i,
+.container-fluid.bg-dark .btn-lg-square:hover i {
+    color: #007bff; /* Change icon color to primary blue on hover */
+}
+
+/* Footer text and link styling */
+.container-fluid.bg-dark p {
+    color: #adb5bd;
+    font-size: 14px;
+}
+
+.container-fluid.bg-dark a {
+    color: #adb5bd;
+    text-decoration: none;
+}
+
+.container-fluid.bg-dark a:hover {
+    text-decoration: underline;
+}
+
+.container-fluid .bi {
+    font-size: 18px; /* Icon size */
+}
+
+.container-fluid .bi-arrow-right {
+    font-size: 16px; /* Arrow icon size */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container-fluid.bg-primary .row {
+        text-align: center;
+    }
+
+    .container-fluid.bg-primary .col-lg-4 {
+        margin-bottom: 20px;
+    }
+
+    .container-fluid.bg-dark .text-center {
+        text-align: center;
+    }
+}
+/* Make icons round and style the buttons */
+.follow-icon {
+    width: 50px;  /* Set the width of the icon button */
+    height: 50px;  /* Set the height of the icon button */
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    background-color: #6c757d;  /* Gray background */
+    border-color: #6c757d;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+.follow-icon i {
+    font-size: 24px;
+    color: white;  /* Icon color */
+}
+
+/* Hover effect for social media icons */
+.follow-icon:hover {
+    background-color: white;  /* Background turns white on hover */
+}
+
+.follow-icon:hover i {
+    color: #007bff;  /* Icon color turns blue on hover */
+}
+
+/* Optional: Add some margin between the icons */
+.follow-icon + .follow-icon {
+    margin-left: 10px;
+}
